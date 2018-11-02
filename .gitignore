@@ -1,4 +1,4 @@
-vertx/
+.vertx/
 _logs/
 build/
 dist/
