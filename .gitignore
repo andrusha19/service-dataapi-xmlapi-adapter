@@ -1,6 +1,6 @@
-.vertx/
-._logs/
-.build/
-.dist/
-.file-uploads/
-.logs/
+vertx/
+_logs/
+build/
+dist/
+file-uploads/
+logs/
