@@ -1,0 +1,17 @@
+15:12:05.170 INFO  Bootstrap - =============================================
+15:12:05.175 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+15:12:05.175 INFO  Bootstrap - Http http://127.0.0.1:9153
+15:12:05.176 INFO  Bootstrap - =============================================
+15:13:22.037 INFO  Bootstrap - =============================================
+15:13:22.039 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+15:13:22.040 INFO  Bootstrap - Http http://127.0.0.1:9153
+15:13:22.041 INFO  Bootstrap - =============================================
+15:14:07.573 INFO  Bootstrap - =============================================
+15:14:07.575 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+15:14:07.576 INFO  Bootstrap - Http http://127.0.0.1:9153
+15:14:07.577 INFO  Bootstrap - =============================================
+15:15:44.427 INFO  Bootstrap - =============================================
+15:15:44.429 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+15:15:44.429 INFO  Bootstrap - Http http://127.0.0.1:9153
+15:15:44.430 INFO  Bootstrap - =============================================
+15:15:59.201 ERROR Nearest - Error from dapi response. Status code: 401

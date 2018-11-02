@@ -1,0 +1,46 @@
+13:16:35.670 INFO  Bootstrap - =============================================
+13:16:35.672 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+13:16:35.672 INFO  Bootstrap - Http http://127.0.0.1:9153
+13:16:35.673 INFO  Bootstrap - =============================================
+13:17:06.693 INFO  Bootstrap - =============================================
+13:17:06.695 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+13:17:06.696 INFO  Bootstrap - Http http://127.0.0.1:9153
+13:17:06.697 INFO  Bootstrap - =============================================
+13:19:31.219 INFO  Bootstrap - =============================================
+13:19:31.222 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+13:19:31.223 INFO  Bootstrap - Http http://127.0.0.1:9153
+13:19:31.225 INFO  Bootstrap - =============================================
+13:21:54.038 ERROR Pointer - Error from dapi response. Status code: 400
+13:22:08.412 ERROR Pointer - Error from dapi response. Status code: 400
+13:22:14.863 ERROR Pointer - Error from dapi response. Status code: 400
+13:22:40.203 INFO  Bootstrap - =============================================
+13:22:40.205 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+13:22:40.206 INFO  Bootstrap - Http http://127.0.0.1:9153
+13:22:40.207 INFO  Bootstrap - =============================================
+13:22:42.099 ERROR Pointer - Error from dapi response. Status code: 400
+13:32:36.860 INFO  Bootstrap - =============================================
+13:32:36.862 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+13:32:36.862 INFO  Bootstrap - Http http://127.0.0.1:9153
+13:32:36.863 INFO  Bootstrap - =============================================
+14:07:21.230 INFO  Bootstrap - =============================================
+14:07:21.232 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+14:07:21.232 INFO  Bootstrap - Http http://127.0.0.1:9153
+14:07:21.233 INFO  Bootstrap - =============================================
+14:07:25.913 ERROR Route - Error from dapi response. Status code: 500
+14:07:44.621 ERROR Route - Error from dapi response. Status code: 500
+14:07:53.783 ERROR Route - Error from dapi response. Status code: 500
+14:08:10.919 ERROR Route - Error from dapi response. Status code: 500
+14:09:41.211 INFO  Bootstrap - =============================================
+14:09:41.213 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+14:09:41.213 INFO  Bootstrap - Http http://127.0.0.1:9153
+14:09:41.214 INFO  Bootstrap - =============================================
+14:11:11.555 ERROR Route - Error from dapi response. Status code: 500
+14:11:33.606 INFO  Bootstrap - =============================================
+14:11:33.609 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+14:11:33.609 INFO  Bootstrap - Http http://127.0.0.1:9153
+14:11:33.610 INFO  Bootstrap - =============================================
+14:11:37.160 ERROR Route - Error from dapi response. Status code: 500
+14:13:10.147 INFO  Bootstrap - =============================================
+14:13:10.149 INFO  Bootstrap - Service-dapi-xml-adapter successfully started
+14:13:10.150 INFO  Bootstrap - Http http://127.0.0.1:9153
+14:13:10.151 INFO  Bootstrap - =============================================

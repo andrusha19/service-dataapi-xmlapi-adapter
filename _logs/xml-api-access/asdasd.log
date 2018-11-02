@@ -1,0 +1,14 @@
+15:15:59 127.0.0.1 200 86 8 / 
+ Request: 
+ <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<request>
+	<authority key="asdasd"/>
+	<method name="getNearest"/>
+	<parameters>
+		<database>World_ru</database>
+		<point lat="50.455189" lng="30.511414"/>
+		<layer type="alias">Адреса</layer>
+	</parameters>
+</request> 
+ Response: 
+ <?xml version='1.0' encoding='UTF-8'?><response><error>Unauthorized</error></response>

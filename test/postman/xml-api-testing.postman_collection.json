@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "835f92f2-5a0d-4327-9681-e76d3d94e658",
+		"name": "xml-api-testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAddress",
+			"item": [
+				{
+					"name": "getAddress 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9f5e0752-ab04-4d5a-888a-67a48f9cca46",
+								"exec": [
+									"pm.test(\"Status is ok\", () => pm.response.to.be.ok);",
+									"",
+									"var jsonObject = xml2Json(responseBody);",
+									"",
+									"tests['Correct name parameter'] = jsonObject['response']['addresses']['address']['name'] === '56';",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n\t\t<request>\n\t\t    <authority key=\"{{adminAuthorityKey}}\"/>\n\t\t    <method name=\"getAddress\"/>\n\t\t    <parameters>\n\t\t        <database>World_ru</database>\n\t\t    \t<filter>\n\t\t\t          <semantic>\n\t\t    \t\t   <layer type=\"name\">Settlements</layer>\n\t\t                <name>Черкассы</name>\n\t\t            </semantic>\n\t\t            <semantic>\n\t\t                <layer type=\"name\">STR</layer>\n\t\t                <name>шевченко</name>\n\t\t            </semantic>\n\t\t            <semantic>\n\t\t                <layer type=\"name\">ADR</layer>\n\t\t                <name>56</name>\n\t\t            </semantic></filter>\n\t\t        <response><layer type=\"name\">ADR</layer></response>\n\t\t    </parameters>\n\t\t</request>"
+						},
+						"url": {
+							"raw": "{{serviceXMLDataapiUrl}}",
+							"host": [
+								"{{serviceXMLDataapiUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAddress 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a17fe0e5-c9fb-4a0e-80fa-a060c0700756",
+								"exec": [
+									"pm.test(\"Status is ok\", () => pm.response.to.be.ok);",
+									"",
+									"var jsonObject = xml2Json(responseBody);",
+									"",
+									"tests['Correct name parameter'] = jsonObject['response']['streets']['street']['name'] === 'Сумгаитская';"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n\t\t<request>\n\t\t    <authority key=\"{{adminAuthorityKey}}\"/>\n\t\t    <method name=\"getAddress\"/>\n\t\t    <parameters>\n\t\t        <database>World_ru</database>\n\t\t    \t<filter>\n\t\t\t          <semantic>\n\t\t    \t\t   <layer type=\"name\">Settlements</layer>\n\t\t                <name>Черкассы</name>\n\t\t            </semantic>\n\t\t            <semantic>\n\t\t                <layer type=\"name\">STR</layer>\n\t\t                <name>Сумгаитская</name>\n\t\t            </semantic></filter>\n\t\t        <response><layer type=\"name\">STR</layer></response>\n\t\t    </parameters>\n\t\t</request>"
+						},
+						"url": {
+							"raw": "{{serviceXMLDataapiUrl}}",
+							"host": [
+								"{{serviceXMLDataapiUrl}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "IdentifyObject",
+			"item": [
+				{
+					"name": "IdentifyObject 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c141cc37-fbbc-4fc9-b642-14ae725fb863",
+								"exec": [
+									"pm.test(\"Status is ok\", () => pm.response.to.be.ok);",
+									"",
+									"var jsonObject = xml2Json(responseBody);",
+									"",
+									"tests['Correct name parameter'] = jsonObject['response']['object']['name'] === '25/2';"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<request>\r\n\t<authority key=\"{{adminAuthorityKey}}\"/>\r\n\t<method name=\"IdentifyObject\"/>\r\n\t<parameters>\r\n\t\t<database>World_ru</database>\r\n\t\t<point lat=\"50.455189\" lng=\"30.511414\"/>\r\n\t\t<layers>\r\n\t\t\t<layer type=\"alias\">Адреса</layer>\r\n\t\t\t<layer type=\"alias\">Населенные пункты</layer>\r\n\t\t</layers>\r\n\t</parameters>\r\n</request>"
+						},
+						"url": {
+							"raw": "{{serviceXMLDataapiUrl}}",
+							"host": [
+								"{{serviceXMLDataapiUrl}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getNearest",
+			"item": [
+				{
+					"name": "getNearest 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4bfaa206-c2f2-4a44-8ba9-2fb0c1a013e2",
+								"exec": [
+									"pm.test(\"Status is ok\", () => pm.response.to.be.ok);",
+									"",
+									"var jsonObject = xml2Json(responseBody);",
+									"",
+									"tests['Correct name parameter'] = jsonObject['response']['object']['name'] === '25/2'"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<request>\r\n\t<authority key=\"{{adminAuthorityKey}}\"/>\r\n\t<method name=\"getNearest\"/>\r\n\t<parameters>\r\n\t\t<database>World_ru</database>\r\n\t\t<point lat=\"50.455189\" lng=\"30.511414\"/>\r\n\t\t<layer type=\"alias\">Адреса</layer>\r\n\t</parameters>\r\n</request>"
+						},
+						"url": {
+							"raw": "{{serviceXMLDataapiUrl}}",
+							"host": [
+								"{{serviceXMLDataapiUrl}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getPointer",
+			"item": [
+				{
+					"name": "getPointer 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "aefa0917-7a3e-4146-91fc-95d6d1b86e5e",
+								"exec": [
+									"pm.test(\"Status is ok\", () => pm.response.to.be.ok);",
+									"",
+									"var jsonObject = xml2Json(responseBody);",
+									"var lat = jsonObject['response']['points']['point'].$.lat;",
+									"var lng = jsonObject['response']['points']['point'].$.lng;",
+									"tests['Correct lat value'] = lat > 48 && lat < 50;",
+									"tests['Correct lng value'] = lng > 30 && lng < 32;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<request>\r\n\t<authority key=\"{{adminAuthorityKey}}\"/>\r\n\t<method name=\"getPointer\"/>\r\n\t<parameters>\r\n\t\t<database>World_ru</database>\r\n\t\t<objects>\r\n\t\t\t<id>ADMUA7J</id>\r\n\t\t</objects>\r\n\t</parameters>\r\n</request>"
+						},
+						"url": {
+							"raw": "{{serviceXMLDataapiUrl}}",
+							"host": [
+								"{{serviceXMLDataapiUrl}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getRoute",
+			"item": [
+				{
+					"name": "getRoute 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ef4ca63c-d2bf-4295-badd-202e2cf35153",
+								"exec": [
+									"pm.test(\"Status is ok\", () => pm.response.to.be.ok);",
+									"",
+									"var jsonObject = xml2Json(responseBody);",
+									"var length = jsonObject['response']['route']['edges'].$.length;",
+									"tests['Correct length value'] = length > 190000 && length < 195000;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<request>\r\n\t<authority key=\"{{adminAuthorityKey}}\"/>\r\n\t<method name=\"getRoute\"/>\r\n\t<parameters>\r\n\t\t<database>World_ru</database>\r\n\t\t<points>\r\n\t\t\t<point lat=\"51.5530\" lng=\"30.6066\" type=\"start\"/>\r\n\t\t\t<point lat=\"50.5530\" lng=\"30.6066\" type=\"finish\"/>\r\n\t\t</points>\r\n\t</parameters>\r\n</request>"
+						},
+						"url": {
+							"raw": "{{serviceXMLDataapiUrl}}",
+							"host": [
+								"{{serviceXMLDataapiUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRoute 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "87311ae0-3745-4678-932b-0e4ec70ce401",
+								"exec": [
+									"pm.test(\"Status is ok\", () => pm.response.to.be.ok);",
+									"",
+									"var jsonObject = xml2Json(responseBody);",
+									"var length = jsonObject['response']['route']['edges'].$.length;",
+									"tests['Correct length value'] = length === '0';"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<request>\r\n\t<authority key=\"{{adminAuthorityKey}}\"/>\r\n\t<method name=\"getRoute\"/>\r\n\t<parameters>\r\n\t\t<database>World_ru</database>\r\n\t\t<points>\r\n\t\t\t<point lat=\"50.5530\" lng=\"30.6066\" type=\"start\"/>\r\n\t\t\t<point lat=\"50.5530\" lng=\"30.6066\" type=\"finish\"/>\r\n\t\t</points>\r\n\t</parameters>\r\n</request>"
+						},
+						"url": {
+							"raw": "{{serviceXMLDataapiUrl}}",
+							"host": [
+								"{{serviceXMLDataapiUrl}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b01721c6-baa9-4189-af03-4df8d0773bf3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a17e5917-0b0c-4e0b-8bf8-23290b80aede",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "d5456d5c-93bd-47a2-aaec-273009e4f458",
+			"key": "adminAuthorityKey",
+			"value": "YOUR_API_KEY",
+			"type": "string"
+		},
+		{
+			"id": "0f3e6fa5-f68a-4fae-8a76-20403cb48895",
+			"key": "serviceXMLDataapiUrl",
+			"value": "http://127.0.0.1:9153",
+			"type": "string"
+		}
+	]
+}
